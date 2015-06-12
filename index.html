@@ -13,6 +13,8 @@
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui.min.js"></script>
 	<script type='text/javascript' src='script.js'></script>
 
 </head>
@@ -20,14 +22,10 @@
 <body>
 
 	<div id="header">
-		<p>
-		<div id="table">
+		<div class="table">
 			<div id="header-left">The Periodic Table</div>
 			<div id="header-right">
-				<!--<a href="#"><img src="cloud_button.png"></a>-->
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-				<p>
+				<button id="info-button">About</button>
 			</div>
 		</div>
 	</div>
@@ -43,32 +41,31 @@
 	<div id="dialog9"> </div>  
 	<div id="dialog10"> </div> 
 
-	<div id="table">
+	<div class="table">
 
 		<div id="columns">
-			<div id="blank_3"></div>
-			<a href="#"><div id="col1Selector" > 1</div></a>
-			<a href="#"><div id="col2Selector" > 2</div></a>
-			<a href="#"><div id="col3Selector" > 3</div></a>
-			<a href="#"><div id="col4Selector" > 4</div></a>
-			<a href="#"><div id="col5Selector" > 5</div></a>
-			<a href="#"><div id="col6Selector" > 6</div></a>
-			<a href="#"><div id="col7Selector" > 7</div></a>
-			<a href="#"><div id="col8Selector" > 8</div></a>
-			<a href="#"><div id="col9Selector" > 9</div></a>
-			<a href="#"><div id="col10Selector" > 10</div></a>
-			<a href="#"><div id="col11Selector" > 11</div></a>
-			<a href="#"><div id="col12Selector" > 12</div></a>
-			<a href="#"><div id="col13Selector" > 13</div></a>
-			<a href="#"><div id="col14Selector" > 14</div></a>
-			<a href="#"><div id="col15Selector" > 15</div></a>
-			<a href="#"><div id="col16Selector" > 16</div></a>
-			<a href="#"><div id="col17Selector" > 17</div></a>
-			<a href="#"><div id="col18Selector" > 18</div></a>
+			<a href="#"><div class="colSelector" >1</div></a>
+			<a href="#"><div class="colSelector">2</div></a>
+			<a href="#"><div class="colSelector">3</div></a>
+			<a href="#"><div class="colSelector">4</div></a>
+			<a href="#"><div class="colSelector">5</div></a>
+			<a href="#"><div class="colSelector">6</div></a>
+			<a href="#"><div class="colSelector">7</div></a>
+			<a href="#"><div class="colSelector">8</div></a>
+			<a href="#"><div class="colSelector">9</div></a>
+			<a href="#"><div class="colSelector">10</div></a>
+			<a href="#"><div class="colSelector">11</div></a>
+			<a href="#"><div class="colSelector">12</div></a>
+			<a href="#"><div class="colSelector">13</div></a>
+			<a href="#"><div class="colSelector">14</div></a>
+			<a href="#"><div class="colSelector">15</div></a>
+			<a href="#"><div class="colSelector">16</div></a>
+			<a href="#"><div class="colSelector">17</div></a>
+			<a href="#"><div class="colSelector">18</div></a>
 		</div>
 	
-		<div id="row_1">
-			<a href="#"><div id="row1Selector" > 1</div></a>
+		<div class="row">
+			<a href="#"><div class="rowSelector">1</div></a>
 			<a href="#"><div  class="nonMetals effects col1 orange h"> &nbsp;1 <br> <b>&nbsp;&nbsp;&nbsp;H</b> </div></a>
 
 			<div id="blank_1"> </div>
@@ -76,8 +73,8 @@
 			<a href="#"><div  class="noble effects col18 purple he"> &nbsp;2 <br> <b>&nbsp;&nbsp;He</b> </div></a>
 		</div>
 
-		<div id="row_2">
-			<a href="#"><div id="row2Selector" > 2</div></a>
+		<div class="row">
+			<a href="#"><div class="rowSelector">2</div></a>
 			<a href="#"><div class="alkalai effects col1 red li"> &nbsp;3 <br> <b>&nbsp;&nbsp;&nbsp;Li</b> </div></a>
 			<a href="#"><div  class="alkaliEarth effects col2 yellow be"> &nbsp;4 <br> <b>&nbsp;&nbsp;&nbsp;Be</b> </div></a>
 
@@ -91,8 +88,8 @@
 			<a href="#"><div  class="noble effects col18 purple ne"> &nbsp;10 <br> <b>&nbsp;&nbsp;Ne</b> </div></a>
 		</div>
 
-		<div id ="row_3">
-			<a href="#"><div id="row3Selector" > 3</div></a>
+		<div class="row">
+			<a href="#"><div class="rowSelector"> 3</div></a>
 			<a href="#"><div  class="alkalai effects col1 red na"> &nbsp;11 <br> <b>&nbsp;&nbsp;Na</b> </div></a>
 			<a href="#"><div  class="alkaliEarth effects col2 yellow mg"> &nbsp;12 <br> <b>&nbsp;&nbsp;Mg</b> </div></a>
 
@@ -106,8 +103,8 @@
 			<a href="#"><div  class="noble effects col18 purple ar"> &nbsp;18 <br> <b>&nbsp;&nbsp;Ar</b> </div></a>
 		</div>
 
-		<div id="row_4">
-			<a href="#"><div id="row4Selector" > 4</div></a>
+		<div class="row">
+			<a href="#"><div class="rowSelector"> 4</div></a>
 			<a href="#"><div  class="alkalai effects col1 red k"> &nbsp;19 <br> <b>&nbsp;&nbsp;&nbsp;K</b> </div></a>
 			<a href="#"><div  class="alkaliEarth effects col2 yellow ca"> &nbsp;20 <br> <b>&nbsp;&nbsp;Ca</b> </div></a>
 			<a href="#"><div  class="transition effects col3 blue sc"> &nbsp;21 <br> <b>&nbsp;&nbsp;Sc</b> </div></a>
@@ -128,8 +125,8 @@
 			<a href="#"><div  class="noble effects col18 purple kr"> &nbsp;36 <br> <b>&nbsp;&nbsp;Kr</b> </div></a>
 		</div>
 
-		<div id="row_5">
-			<a href="#"><div id="row5Selector" > 5</div></a>
+		<div class="row">
+			<a href="#"><div class="rowSelector"> 5</div></a>
 			<a href="#"><div  class="alkalai effects col1 red rb"> &nbsp;37 <br> <b>&nbsp;&nbsp;Rb</b> </div></a>
 			<a href="#"><div  class="alkaliEarth effects col2 yellow sr"> &nbsp;38 <br> <b>&nbsp;&nbsp;Sr</b> </div></a>
 			<a href="#"><div  class="transition effects col3 blue y"> &nbsp;39 <br> <b>&nbsp;&nbsp;&nbsp;Y</b> </div></a>
@@ -151,8 +148,8 @@
 		</div>
 
 
-		<div id="row_6">
-			<a href="#"><div id="row6Selector" > 6</div></a>
+		<div class="row">
+			<a href="#"><div class="rowSelector rowSelectorLower row6"> 6</div></a>
 			<a href="#"><div  class="alkalai effects col1 red cs"> &nbsp;55 <br> <b>&nbsp;&nbsp;Cs</b> </div></a>
 			<a href="#"><div  class="alkaliEarth effects col2 yellow ba"> &nbsp;56 <br> <b>&nbsp;&nbsp;Ba</b> </div></a>
 
@@ -175,8 +172,8 @@
 			<a href="#"><div  class="noble effects col18 purple rn"> &nbsp;86 <br> <b>&nbsp;&nbsp;Rn</b> </div></a>
 		</div>
 
-		<div id="row_7">
-			<a href="#"><div id="row7Selector" > 7</div></a>
+		<div class="row">
+			<a href="#"><div class="rowSelector rowSelectorLower row7"> 7</div></a>
 			<a href="#"><div  class="alkalai effects col1 red fr"> &nbsp;72 <br> <b>&nbsp;&nbsp;Fr</b> </div></a>
 			<a href="#"><div  class="alkaliEarth effects col2 yellow ra"> &nbsp;73 <br> <b>&nbsp;&nbsp;Ra</b> </div></a>
 
@@ -202,10 +199,7 @@
 
 	<div id="table_lower">
 		<p>
-		<div id="row_6">
-			<div id="blank_3"></div>
-			<div id="blank_3"></div>
-			<div id="blank_3"></div>
+		<div id="row_6" class="row_lower">
 			<a href="#"><div class="lanthanides effects col3 lavander la"> &nbsp;57 <br> <b>&nbsp;&nbsp;La</b> </div></a>
 			<a href="#"><div class="lanthanides effects col4 lavander ce"> &nbsp;58 <br> <b>&nbsp;&nbsp;Ce</b> </div></a>
 			<a href="#"><div class="lanthanides effects col5 lavander pr"> &nbsp;59 <br> <b>&nbsp;&nbsp;Pr</b> </div></a>
@@ -223,10 +217,7 @@
 			<a href="#"><div class="lanthanides effects col17 lavander lu"> &nbsp;71 <br> <b>&nbsp;&nbsp;Lu</b> </div></a>
 		</div>
 
-		<div id="row_7">
-			<div id="blank_3"></div>
-			<div id="blank_3"></div>
-			<div id="blank_3"></div>
+		<div id="row_7" class="row_lower">
 			<a href="#"><div class="actinoids effects col3 pink ac"> &nbsp;89 <br> <b>&nbsp;&nbsp;Ac</b> </div></a>
 			<a href="#"><div class="actinoids effects col4 pink th"> &nbsp;90 <br> <b>&nbsp;&nbsp;Th</b> </div></a>
 			<a href="#"><div class="actinoids effects col5 pink pa"> &nbsp;91 <br> <b>&nbsp;&nbsp;Pa</b> </div></a>
@@ -245,10 +236,7 @@
 		</div>
 	</div>
 
-	<div id="table">
-		<p>
-			<div id="blank_3"></div>
-			<div id="blank_3"></div>
+	<div id="group_key" class="table">
 
 			<a href="#"><div id="nonMetalsKey">Non Metals</div></a>
 			<a href="#"><div id="alkalaiKey">Alkalai</div></a>

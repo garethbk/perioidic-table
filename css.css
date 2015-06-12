@@ -23,14 +23,30 @@ h3
 	font-size: 32px;
 	text-shadow: 2px 2px #6B6B6B;
 	float: left;
+	margin: 25px;
 }
 
 #header-right{
 	float: right;
 }
 
+#info-button {
+	width: 75px;
+	height: 50px;
+	margin: 25px;
 
-#table{
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	text-shadow: 2px 2px #6B6B6B;
+	background-color: rgb(56, 132, 192);
+	border: 0px outset black;
+	box-shadow: 2px 2px #6B6B6B;
+	border-radius: 10px;
+}
+
+
+.table{
 	height: auto;
 	width: 1068px;
 	margin-left: auto;
@@ -40,12 +56,12 @@ h3
 	font-weight: bold;
 }
 
-#table a{
+.table a{
 	color: white;
 	font-size: 12px;
 }
 
-#table b{
+.table b{
 	font-size: 18px;
 	text-shadow: 2px 2px #6B6B6B;
 }
@@ -109,21 +125,30 @@ h3
 	text-align: center;
 }
 
-/*select by column */
-
-#columns{
-	height: 55px;
-	width: 1068px;
-}
-
-#col1Selector, #col2Selector, #col3Selector, #col4Selector, #col5Selector, #col6Selector, #col7Selector, #col8Selector, #col9Selector,
-#col10Selector, #col11Selector, #col12Selector, #col13Selector, #col14Selector, #col15Selector, #col16Selector, #col17Selector, #col18Selector
-{
+.rowSelector {
 	height:55px;
 	width:50px;
 	background-color: rgba(255, 255, 255, .2);
 	float:left;
 	margin:3px;
+	color: black;
+	text-align: center;
+}
+
+/*select by column */
+
+#columns{
+	height: 55px;
+	width: 1018px;
+	margin-left: 56px;
+}
+
+.colSelector {
+	height: 55px;
+	width: 50px;
+	background-color: rgba(255, 255, 255, 0.2);
+	float: left;
+	margin: 3px;
 	color: black;
 	text-align: center;
 }
@@ -235,6 +260,11 @@ h3
 	box-shadow: 2px 2px  #6B6B6B;
 }
 
+.row {
+	height: 61px;
+	width: auto;
+}
+
 #row_1{
 	height:61px;
 	width:auto;
@@ -268,6 +298,14 @@ h3
 #row_7{
 	height:61px;
 	width:auto;
+}
+
+.row_lower {
+	margin-left: 168px;
+}
+
+#group_key {
+	margin: 25px 0px 25px 275px;
 }
 
 

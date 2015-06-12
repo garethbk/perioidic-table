@@ -149,108 +149,27 @@ $(document).ready(function (){
 
 
     //select rows
-    $('#row1Selector').click(function () {
-        $('#row_1').effect('shake', {distance: 5, times: 3}, 1000);
+    $('.rowSelector').click(function(e){
+        e.preventDefault();
+        $(this).parents('.row').effect('shake', {distance: 5, times: 3}, 1000);
     });
 
-    $('#row2Selector').click(function () {
-        $('#row_2').effect('shake', {distance: 5, times: 3}, 1000);
+    //select rows split into upper and lower table elements
+    $('.rowSelectorLower').click(function(e){
+        e.preventDefault();
+        if ($(this).hasClass('row6')){
+            $('#table_lower > #row_6').effect('shake', {distance: 5, times: 3}, 1000);
+        } else {
+            $('#table_lower > #row_7').effect('shake', {distance: 5, times: 3}, 1000);
+        }
     });
-
-    $('#row3Selector').click(function () {
-        $('#row_3').effect('shake', {distance: 5, times: 3}, 1000);
-    });
-
-    $('#row4Selector').click(function () {
-        $('#row_4').effect('shake', {distance: 5, times: 3}, 1000);
-    });
-
-    $('#row5Selector').click(function () {
-        $('#row_5').effect('shake', {distance: 5, times: 3}, 1000);
-    });
-
-    $('#row6Selector').click(function () {
-        $('#row_6').effect('shake', {distance: 5, times: 3}, 1000);
-        $('#table_lower > #row_6').effect('shake', {distance: 5, times: 3}, 1000);
-    });
-
-    $('#row7Selector').click(function () {
-        $('#row_7').effect('shake', {distance: 5, times: 3}, 1000);
-        $('#table_lower > #row_7').effect('shake', {distance: 5, times: 3}, 1000);
-    });
-
 
     //select columns
-    $('#col1Selector').click(function () {
-        $('.col1').effect('bounce', {distance: 10, times: 3}, 750);
-    });
-
-    $('#col2Selector').click(function () {
-        $('.col2').effect('bounce', {distance: 10, times: 3}, 750);
-    });
-
-    $('#col3Selector').click(function () {
-        $('.col3').effect('bounce', {distance: 10, times: 3}, 750);
-    });
-
-    $('#col4Selector').click(function () {
-        $('.col4').effect('bounce', {distance: 10, times: 3}, 750);
-    });
-
-    $('#col5Selector').click(function () {
-        $('.col5').effect('bounce', {distance: 10, times: 3}, 750);
-    });
-
-    $('#col6Selector').click(function () {
-        $('.col6').effect('bounce', {distance: 10, times: 3}, 750);
-    });
-
-    $('#col7Selector').click(function () {
-        $('.col7').effect('bounce', {distance: 10, times: 3}, 750);
-    });
-
-    $('#col8Selector').click(function () {
-        $('.col8').effect('bounce', {distance: 10, times: 3}, 750);
-    });
-
-    $('#col9Selector').click(function () {
-        $('.col9').effect('bounce', {distance: 10, times: 3}, 750);
-    });
-
-    $('#col10Selector').click(function () {
-        $('.col10').effect('bounce', {distance: 10, times: 3}, 750);
-    });
-
-    $('#col11Selector').click(function () {
-        $('.col11').effect('bounce', {distance: 10, times: 3}, 750);
-    });
-
-    $('#col12Selector').click(function () {
-        $('.col12').effect('bounce', {distance: 10, times: 3}, 750);
-    });
-
-    $('#col13Selector').click(function () {
-        $('.col13').effect('bounce', {distance: 10, times: 3}, 750);
-    });
-
-    $('#col14Selector').click(function () {
-        $('.col14').effect('bounce', {distance: 10, times: 3}, 750);
-    });
-
-    $('#col15Selector').click(function () {
-        $('.col15').effect('bounce', {distance: 10, times: 3}, 750);
-    });
-
-    $('#col16Selector').click(function () {
-        $('.col16').effect('bounce', {distance: 10, times: 3}, 750);
-    });
-
-    $('#col17Selector').click(function () {
-        $('.col17').effect('bounce', {distance: 10, times: 3}, 750);
-    });
-
-    $('#col18Selector').click(function () {
-        $('.col18').effect('bounce', {distance: 10, times: 3}, 750);
+    $('.colSelector').click(function(e){
+        e.preventDefault();
+        var colNum = $(this).html();
+        var colClass = '.col' + colNum;
+        $(colClass).effect('bounce', {distance: 10, times: 3}, 750);
     });
 
     //select by group color
