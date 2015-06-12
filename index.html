@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>Periodic Table of Elements</title>
+
+	<link href="css.css" rel="stylesheet" type="text/css" />
+	<link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script type='text/javascript' src='script.js'></script>
+
+</head>
+
+<body>
+
+	<div id="header">
+		<p>
+		<div id="table">
+			<div id="header-left">The Periodic Table</div>
+			<div id="header-right">
+				<!--<a href="#"><img src="cloud_button.png"></a>-->
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p>
+			</div>
+		</div>
+	</div>
+
+	<div id="dialog1"> </div>
+	<div id="dialog2"> </div>
+	<div id="dialog3"> </div>
+	<div id="dialog4"> </div>
+	<div id="dialog5"> </div>  
+	<div id="dialog6"> </div>
+	<div id="dialog7"> </div> 
+	<div id="dialog8"> </div>
+	<div id="dialog9"> </div>  
+	<div id="dialog10"> </div> 
+
+	<div id="table">
+
+		<div id="columns">
+			<div id="blank_3"></div>
+			<a href="#"><div id="col1Selector" > 1</div></a>
+			<a href="#"><div id="col2Selector" > 2</div></a>
+			<a href="#"><div id="col3Selector" > 3</div></a>
+			<a href="#"><div id="col4Selector" > 4</div></a>
+			<a href="#"><div id="col5Selector" > 5</div></a>
+			<a href="#"><div id="col6Selector" > 6</div></a>
+			<a href="#"><div id="col7Selector" > 7</div></a>
+			<a href="#"><div id="col8Selector" > 8</div></a>
+			<a href="#"><div id="col9Selector" > 9</div></a>
+			<a href="#"><div id="col10Selector" > 10</div></a>
+			<a href="#"><div id="col11Selector" > 11</div></a>
+			<a href="#"><div id="col12Selector" > 12</div></a>
+			<a href="#"><div id="col13Selector" > 13</div></a>
+			<a href="#"><div id="col14Selector" > 14</div></a>
+			<a href="#"><div id="col15Selector" > 15</div></a>
+			<a href="#"><div id="col16Selector" > 16</div></a>
+			<a href="#"><div id="col17Selector" > 17</div></a>
+			<a href="#"><div id="col18Selector" > 18</div></a>
+		</div>
+	
+		<div id="row_1">
+			<a href="#"><div id="row1Selector" > 1</div></a>
+			<a href="#"><div  class="nonMetals effects col1 orange h"> &nbsp;1 <br> <b>&nbsp;&nbsp;&nbsp;H</b> </div></a>
+
+			<div id="blank_1"> </div>
+
+			<a href="#"><div  class="noble effects col18 purple he"> &nbsp;2 <br> <b>&nbsp;&nbsp;He</b> </div></a>
+		</div>
+
+		<div id="row_2">
+			<a href="#"><div id="row2Selector" > 2</div></a>
+			<a href="#"><div class="alkalai effects col1 red li"> &nbsp;3 <br> <b>&nbsp;&nbsp;&nbsp;Li</b> </div></a>
+			<a href="#"><div  class="alkaliEarth effects col2 yellow be"> &nbsp;4 <br> <b>&nbsp;&nbsp;&nbsp;Be</b> </div></a>
+
+			<div id="blank_2"> </div>
+
+			<a href="#"><div  class="metalloids effects col13 fuschia b"> &nbsp;5 <br> <b>&nbsp;&nbsp;&nbsp;B</b> </div></a>
+			<a href="#"><div  class="nonMetals effects col14 orange c"> &nbsp;6 <br> <b>&nbsp;&nbsp;&nbsp;C</b> </div></a>
+			<a href="#"><div  class="nonMetals effects col15 orange n"> &nbsp;7 <br> <b>&nbsp;&nbsp;&nbsp;N</b> </div></a>
+			<a href="#"><div  class="nonMetals effects col16 orange o"> &nbsp;8 <br> <b>&nbsp;&nbsp;&nbsp;O</b> </div></a>
+			<a href="#"><div  class="halogens effects col17 teal f"> &nbsp;9 <br> <b>&nbsp;&nbsp;&nbsp;F</b> </div></a>
+			<a href="#"><div  class="noble effects col18 purple ne"> &nbsp;10 <br> <b>&nbsp;&nbsp;Ne</b> </div></a>
+		</div>
+
+		<div id ="row_3">
+			<a href="#"><div id="row3Selector" > 3</div></a>
+			<a href="#"><div  class="alkalai effects col1 red na"> &nbsp;11 <br> <b>&nbsp;&nbsp;Na</b> </div></a>
+			<a href="#"><div  class="alkaliEarth effects col2 yellow mg"> &nbsp;12 <br> <b>&nbsp;&nbsp;Mg</b> </div></a>
+
+			<div id="blank_2">  </div>
+
+			<a href="#"><div  class="postTransition effects col13 green al"> &nbsp;13 <br> <b>&nbsp;&nbsp;Al</b> </div></a>
+			<a href="#"><div  class="metalloids effects col14 fuschia si">&nbsp; 14 <br> <b>&nbsp;&nbsp;Si</b> </div></a>
+			<a href="#"><div  class="nonMetals effects col15 orange p"> &nbsp;15 <br> <b>&nbsp;&nbsp;&nbsp;P</b> </div></a>
+			<a href="#"><div  class="nonMetals effects col16 orange s"> &nbsp;16 <br> <b>&nbsp;&nbsp;&nbsp;S</b> </div></a>
+			<a href="#"><div  class="halogens effects col17 teal cl"> &nbsp;17 <br> <b>&nbsp;&nbsp;Cl</b> </div></a>
+			<a href="#"><div  class="noble effects col18 purple ar"> &nbsp;18 <br> <b>&nbsp;&nbsp;Ar</b> </div></a>
+		</div>
+
+		<div id="row_4">
+			<a href="#"><div id="row4Selector" > 4</div></a>
+			<a href="#"><div  class="alkalai effects col1 red k"> &nbsp;19 <br> <b>&nbsp;&nbsp;&nbsp;K</b> </div></a>
+			<a href="#"><div  class="alkaliEarth effects col2 yellow ca"> &nbsp;20 <br> <b>&nbsp;&nbsp;Ca</b> </div></a>
+			<a href="#"><div  class="transition effects col3 blue sc"> &nbsp;21 <br> <b>&nbsp;&nbsp;Sc</b> </div></a>
+			<a href="#"><div  class="transition effects col4 blue ti"> &nbsp;22 <br> <b>&nbsp;&nbsp;Ti</b> </div></a>
+			<a href="#"><div  class="transition effects col5 blue v"> &nbsp;23 <br> <b>&nbsp;&nbsp;&nbsp;V</b> </div></a>
+			<a href="#"><div  class="transition effects col6 blue cr"> &nbsp;24 <br> <b>&nbsp;&nbsp;Cr</b> </div></a>
+			<a href="#"><div  class="transition effects col7 blue mn"> &nbsp;25 <br> <b>&nbsp;&nbsp;Mn</b> </div></a>
+			<a href="#"><div  class="transition effects col8 blue fe"> &nbsp;26 <br> <b>&nbsp;&nbsp;Fe</b> </div></a>
+			<a href="#"><div  class="transition effects col9 blue co"> &nbsp;27 <br> <b>&nbsp;&nbsp;Co</b> </div></a>
+			<a href="#"><div  class="transition effects col10 blue ni"> &nbsp;28 <br> <b>&nbsp;&nbsp;Ni</b> </div></a>
+			<a href="#"><div  class="transition effects col11 blue cu"> &nbsp;29 <br> <b>&nbsp;&nbsp;Cu</b> </div></a>
+			<a href="#"><div  class="transition effects col12 blue zn"> &nbsp;30 <br> <b>&nbsp;&nbsp;Zn</b> </div></a>
+			<a href="#"><div  class="postTransition effects col13 green ga"> &nbsp;31 <br> <b>&nbsp;&nbsp;Ga</b> </div></a>
+			<a href="#"><div  class="metalloids effects col14 fuschia ge"> &nbsp;32 <br> <b>&nbsp;&nbsp;Ge</b> </div></a>
+			<a href="#"><div  class="metalloids effects col15 fuschia as"> &nbsp;33 <br> <b>&nbsp;&nbsp;As</b> </div></a>
+			<a href="#"><div  class="nonMetals effects col16 orange se"> &nbsp;34 <br> <b>&nbsp;&nbsp;Se</b> </div></a>
+			<a href="#"><div  class="halogens effects col17 teal br"> &nbsp;35 <br> <b>&nbsp;&nbsp;Br</b> </div></a>
+			<a href="#"><div  class="noble effects col18 purple kr"> &nbsp;36 <br> <b>&nbsp;&nbsp;Kr</b> </div></a>
+		</div>
+
+		<div id="row_5">
+			<a href="#"><div id="row5Selector" > 5</div></a>
+			<a href="#"><div  class="alkalai effects col1 red rb"> &nbsp;37 <br> <b>&nbsp;&nbsp;Rb</b> </div></a>
+			<a href="#"><div  class="alkaliEarth effects col2 yellow sr"> &nbsp;38 <br> <b>&nbsp;&nbsp;Sr</b> </div></a>
+			<a href="#"><div  class="transition effects col3 blue y"> &nbsp;39 <br> <b>&nbsp;&nbsp;&nbsp;Y</b> </div></a>
+			<a href="#"><div  class="transition effects col4 blue zr"> &nbsp;40 <br> <b>&nbsp;&nbsp;Zr</b> </div></a>
+			<a href="#"><div  class="transition effects col5 blue nb"> &nbsp;41 <br> <b>&nbsp;&nbsp;Nb</b> </div></a>
+			<a href="#"><div  class="transition effects col6 blue mo"> &nbsp;42 <br> <b>&nbsp;&nbsp;Mo</b> </div></a>
+			<a href="#"><div  class="transition effects col7 blue tc"> &nbsp;43 <br> <b>&nbsp;&nbsp;Tc</b> </div></a>
+			<a href="#"><div  class="transition effects col8 blue ru"> &nbsp;44 <br> <b>&nbsp;&nbsp;Ru</b> </div></a>
+			<a href="#"><div  class="transition effects col9 blue rh"> &nbsp;45 <br> <b>&nbsp;&nbsp;Rh</b> </div></a>
+			<a href="#"><div  class="transition effects col10 blue pd"> &nbsp;46 <br> <b>&nbsp;&nbsp;Pd</b> </div></a>
+			<a href="#"><div  class="transition effects col11 blue ag"> &nbsp;47 <br> <b>&nbsp;&nbsp;Ag</b> </div></a>
+			<a href="#"><div  class="transition effects col12 blue cd"> &nbsp;48 <br> <b>&nbsp;&nbsp;Cd</b> </div></a>
+			<a href="#"><div  class="postTransition effects col13 green in"> &nbsp;49 <br> <b>&nbsp;&nbsp;In</b> </div></a>
+			<a href="#"><div  class="postTransition effects col14 green sn"> &nbsp;50 <br> <b>&nbsp;&nbsp;Sn</b> </div></a>
+			<a href="#"><div  class="metalloids effects col15 fuschia sb"> &nbsp;51 <br> <b>&nbsp;&nbsp;Sb</b> </div></a>
+			<a href="#"><div  class="metalloids effects col16 fuschia te"> &nbsp;52 <br> <b>&nbsp;&nbsp;Te</b> </div></a>
+			<a href="#"><div  class="halogens effects col17 teal i"> &nbsp;53 <br> <b>&nbsp;&nbsp;&nbsp;I</b> </div></a>
+			<a href="#"><div  class="noble effects col18 purple xe"> &nbsp;54 <br> <b>&nbsp;&nbsp;Xe</b> </div></a>
+		</div>
+
+
+		<div id="row_6">
+			<a href="#"><div id="row6Selector" > 6</div></a>
+			<a href="#"><div  class="alkalai effects col1 red cs"> &nbsp;55 <br> <b>&nbsp;&nbsp;Cs</b> </div></a>
+			<a href="#"><div  class="alkaliEarth effects col2 yellow ba"> &nbsp;56 <br> <b>&nbsp;&nbsp;Ba</b> </div></a>
+
+			<div class="lanthanides">  </div> <!-- Extend here -->
+
+			<a href="#"><div  class="transition effects col4 blue hf"> &nbsp;72 <br> <b>&nbsp;&nbsp;Hf</b> </div></a>
+			<a href="#"><div  class="transition effects col5 blue ta"> &nbsp;73 <br> <b>&nbsp;&nbsp;Ta</b> </div></a>
+			<a href="#"><div  class="transition effects col6 blue w"> &nbsp;74 <br> <b>&nbsp;&nbsp;&nbsp;W</b> </div></a>
+			<a href="#"><div  class="transition effects col7 blue re"> &nbsp;75 <br> <b>&nbsp;&nbsp;Re</b> </div></a>
+			<a href="#"><div  class="transition effects col8 blue os"> &nbsp;76 <br> <b>&nbsp;&nbsp;Os</b> </div></a>
+			<a href="#"><div  class="transition effects col9 blue ir"> &nbsp;77 <br> <b>&nbsp;&nbsp;Ir</b> </div></a>
+			<a href="#"><div  class="transition effects col10 blue pt"> &nbsp;78 <br> <b>&nbsp;&nbsp;Pt</b> </div></a>
+			<a href="#"><div  class="transition effects col11 blue au"> &nbsp;79 <br> <b>&nbsp;&nbsp;Au</b> </div></a>
+			<a href="#"><div  class="transition effects col12 blue hg"> &nbsp;80 <br> <b>&nbsp;&nbsp;Hg</b> </div></a>
+			<a href="#"><div  class="postTransition effects col13 green tl"> &nbsp;81 <br> <b>&nbsp;&nbsp;Tl</b> </div></a>
+			<a href="#"><div  class="postTransition effects col14 green pb"> &nbsp;82 <br> <b>&nbsp;&nbsp;Pb</b> </div></a>
+			<a href="#"><div  class="postTransition effects col15 green bi"> &nbsp;83 <br> <b>&nbsp;&nbsp;Bi</b> </div></a>
+			<a href="#"><div  class="postTransition effects col16 green po"> &nbsp;84 <br> <b>&nbsp;&nbsp;Po</b> </div></a>
+			<a href="#"><div  class="halogens effects col17 teal at"> &nbsp;85 <br> <b>&nbsp;&nbsp;At</b> </div></a>
+			<a href="#"><div  class="noble effects col18 purple rn"> &nbsp;86 <br> <b>&nbsp;&nbsp;Rn</b> </div></a>
+		</div>
+
+		<div id="row_7">
+			<a href="#"><div id="row7Selector" > 7</div></a>
+			<a href="#"><div  class="alkalai effects col1 red fr"> &nbsp;72 <br> <b>&nbsp;&nbsp;Fr</b> </div></a>
+			<a href="#"><div  class="alkaliEarth effects col2 yellow ra"> &nbsp;73 <br> <b>&nbsp;&nbsp;Ra</b> </div></a>
+
+			<div class="actinoids"> </div> <!-- Extend here -->
+
+			<a href="#"><div  class="transition effects col4 blue rf"> &nbsp;104 <br> <b>&nbsp;&nbsp;Rf</b> </div></a>
+			<a href="#"><div  class="transition effects col5 blue db"> &nbsp;105 <br> <b>&nbsp;&nbsp;Db</b> </div></a>
+			<a href="#"><div  class="transition effects col6 blue sg"> &nbsp;106 <br> <b>&nbsp;&nbsp;Sg</b> </div></a>
+			<a href="#"><div  class="transition effects col7 blue bh"> &nbsp;107 <br> <b>&nbsp;&nbsp;Bh</b> </div></a>
+			<a href="#"><div  class="transition effects col8 blue hs"> &nbsp;108 <br> <b>&nbsp;&nbsp;Hs</b> </div></a>
+			<a href="#"><div  class="transition effects col9 blue mt"> &nbsp;109 <br> <b>&nbsp;&nbsp;Mt</b> </div></a>
+			<a href="#"><div  class="transition effects col10 blue ds"> &nbsp;110 <br> <b>&nbsp;&nbsp;Ds</b> </div></a>
+			<a href="#"><div  class="transition effects col11 blue rg"> &nbsp;111 <br> <b>&nbsp;&nbsp;Rg</b> </div></a>
+			<a href="#"><div  class="transition effects col12 blue cn"> &nbsp;112 <br> <b>&nbsp;&nbsp;Cn</b> </div></a>
+			<a href="#"><div  class="postTransition effects col13 green uut"> &nbsp;113 <br> <b>&nbsp;Uut</b> </div></a>
+			<a href="#"><div  class="postTransition effects col14 green fl"> &nbsp;114 <br> <b>&nbsp;&nbsp;Fl</b> </div></a>
+			<a href="#"><div  class="postTransition effects col15 green uup"> &nbsp;115 <br> <b>&nbsp;Uup</b> </div></a>
+			<a href="#"><div  class="postTransition effects col16 green lv"> &nbsp;116 <br> <b>&nbsp;&nbsp;Lv</b> </div></a>
+			<a href="#"><div  class="halogens effects col17 teal uus"> &nbsp;117 <br> <b>&nbsp;Uus</b> </div></a>
+			<a href="#"><div  class="noble effects col18 purple uuo"> &nbsp;118 <br> <b>&nbsp;Uuo</b> </div></a>
+		</div>
+	</div>
+
+	<div id="table_lower">
+		<p>
+		<div id="row_6">
+			<div id="blank_3"></div>
+			<div id="blank_3"></div>
+			<div id="blank_3"></div>
+			<a href="#"><div class="lanthanides effects col3 lavander la"> &nbsp;57 <br> <b>&nbsp;&nbsp;La</b> </div></a>
+			<a href="#"><div class="lanthanides effects col4 lavander ce"> &nbsp;58 <br> <b>&nbsp;&nbsp;Ce</b> </div></a>
+			<a href="#"><div class="lanthanides effects col5 lavander pr"> &nbsp;59 <br> <b>&nbsp;&nbsp;Pr</b> </div></a>
+			<a href="#"><div class="lanthanides effects col6 lavander nd"> &nbsp;60 <br> <b>&nbsp;&nbsp;Nd</b> </div></a>
+			<a href="#"><div class="lanthanides effects col7 lavander pm"> &nbsp;61 <br> <b>&nbsp;&nbsp;Pm</b> </div></a>
+			<a href="#"><div class="lanthanides effects col8 lavander sm"> &nbsp;62 <br> <b>&nbsp;&nbsp;Sm</b> </div></a>
+			<a href="#"><div class="lanthanides effects col9 lavander eu"> &nbsp;63 <br> <b>&nbsp;&nbsp;Eu</b> </div></a>
+			<a href="#"><div class="lanthanides effects col10 lavander gd"> &nbsp;64 <br> <b>&nbsp;&nbsp;Gd</b> </div></a>
+			<a href="#"><div class="lanthanides effects col11 lavander tb"> &nbsp;65 <br> <b>&nbsp;&nbsp;Tb</b> </div></a>
+			<a href="#"><div class="lanthanides effects col12 lavander dy"> &nbsp;66 <br> <b>&nbsp;&nbsp;Dy</b> </div></a>
+			<a href="#"><div class="lanthanides effects col13 lavander ho"> &nbsp;67 <br> <b>&nbsp;&nbsp;Ho</b> </div></a>
+			<a href="#"><div class="lanthanides effects col14 lavander er"> &nbsp;68 <br> <b>&nbsp;&nbsp;Er</b> </div></a>
+			<a href="#"><div class="lanthanides effects col15 lavander tm"> &nbsp;69 <br> <b>&nbsp;&nbsp;Tm</b> </div></a>
+			<a href="#"><div class="lanthanides effects col16 lavander yb"> &nbsp;70 <br> <b>&nbsp;&nbsp;Yb</b> </div></a>
+			<a href="#"><div class="lanthanides effects col17 lavander lu"> &nbsp;71 <br> <b>&nbsp;&nbsp;Lu</b> </div></a>
+		</div>
+
+		<div id="row_7">
+			<div id="blank_3"></div>
+			<div id="blank_3"></div>
+			<div id="blank_3"></div>
+			<a href="#"><div class="actinoids effects col3 pink ac"> &nbsp;89 <br> <b>&nbsp;&nbsp;Ac</b> </div></a>
+			<a href="#"><div class="actinoids effects col4 pink th"> &nbsp;90 <br> <b>&nbsp;&nbsp;Th</b> </div></a>
+			<a href="#"><div class="actinoids effects col5 pink pa"> &nbsp;91 <br> <b>&nbsp;&nbsp;Pa</b> </div></a>
+			<a href="#"><div class="actinoids effects col6 pink u"> &nbsp;92 <br> <b>&nbsp;&nbsp;&nbsp;U</b> </div></a>
+			<a href="#"><div class="actinoids effects col7 pink np"> &nbsp;93 <br> <b>&nbsp;&nbsp;Np</b> </div></a>
+			<a href="#"><div class="actinoids effects col8 pink pu"> &nbsp;94 <br> <b>&nbsp;&nbsp;Pu</b> </div></a>
+			<a href="#"><div class="actinoids effects col9 pink am"> &nbsp;95 <br> <b>&nbsp;&nbsp;Am</b> </div></a>
+			<a href="#"><div class="actinoids effects col10 pink cm"> &nbsp;96 <br> <b>&nbsp;&nbsp;Cm</b> </div></a>
+			<a href="#"><div class="actinoids effects col11 pink bk"> &nbsp;97 <br> <b>&nbsp;&nbsp;Bk</b> </div></a>
+			<a href="#"><div class="actinoids effects col12 pink cf"> &nbsp;98 <br> <b>&nbsp;&nbsp;Cf</b> </div></a>
+			<a href="#"><div class="actinoids effects col13 pink es"> &nbsp;99 <br> <b>&nbsp;&nbsp;Es</b> </div></a>
+			<a href="#"><div class="actinoids effects col14 pink fm"> &nbsp;100 <br> <b>&nbsp;&nbsp;Fm</b> </div></a>
+			<a href="#"><div class="actinoids effects col15 pink md"> &nbsp;101 <br> <b>&nbsp;&nbsp;Md</b> </div></a>
+			<a href="#"><div class="actinoids effects col16 pink no"> &nbsp;102 <br> <b>&nbsp;&nbsp;No</b> </div></a>
+			<a href="#"><div class="actinoids effects col17 pink lr"> &nbsp;103 <br> <b>&nbsp;&nbsp;Lr</b> </div></a>
+		</div>
+	</div>
+
+	<div id="table">
+		<p>
+			<div id="blank_3"></div>
+			<div id="blank_3"></div>
+
+			<a href="#"><div id="nonMetalsKey">Non Metals</div></a>
+			<a href="#"><div id="alkalaiKey">Alkalai</div></a>
+			<a href="#"><div id="alkaliEarthKey">Alkali Earth</div></a>
+			<a href="#"><div id="transitionKey">Transition</div></a>
+			<a href="#"><div id="metalloidsKey">Metlloids</div></a>
+			<a href="#"><div id="postTransitionKey">Post Transition</div></a>
+			<a href="#"><div id="halogensKey">Halogens</div></a>
+			<a href="#"><div id="nobleKey">Noble Gases</div></a>
+			<a href="#"><div id="lanthanidesKey"> Lathanides</div></a>
+			<a href="#"><div id="actinoidsKey">Actinoids</div></a>
+
+	</div>
+
+
+</body>

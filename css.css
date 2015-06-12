@@ -1,0 +1,498 @@
+body
+{
+	margin: 0px;
+	background-color: #69b8f1;
+	background-image: url('cloud_bg.jpg');
+	font-family: 'Helvetica', sans-serif;
+}
+h3
+{
+	color: white;
+	font-size: 32px;
+	text-shadow: 2px 2px #6B6B6B;
+}
+
+#header{
+
+	height: auto;
+	width: 100%;
+}
+
+#header-left{
+	color: white;
+	font-size: 32px;
+	text-shadow: 2px 2px #6B6B6B;
+	float: left;
+}
+
+#header-right{
+	float: right;
+}
+
+
+#table{
+	height: auto;
+	width: 1068px;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+	overflow: hidden;
+	font-weight: bold;
+}
+
+#table a{
+	color: white;
+	font-size: 12px;
+}
+
+#table b{
+	font-size: 18px;
+	text-shadow: 2px 2px #6B6B6B;
+}
+
+#table_lower{
+	height:auto;
+	width: 1068px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	clear: both;
+	overflow: hidden;
+	font-weight: bold;
+}
+
+#table_lower a{
+	color: white;
+	font-size: 12px;
+}
+
+#table_lower b{
+	font-size: 18px;
+	text-shadow: 2px 2px #6B6B6B;
+}
+
+
+
+/*blank spaces */
+
+
+#blank_1{
+	height:55px;
+	width: 890px;
+	float:left;
+	margin:3px;
+}
+
+#blank_2{
+	height:55px;
+	width: 554px;
+	float:left;
+	margin:3px;
+}
+
+#blank_3{
+	height:55px;
+	width: 50px;
+	float:left;
+	margin:3px;
+}
+
+/*select by row */
+
+#row1Selector, #row2Selector, #row3Selector, #row4Selector, #row5Selector, #row6Selector, #row7Selector{
+	height:55px;
+	width:50px;
+	background-color: rgba(255, 255, 255, .2);
+	float:left;
+	margin:3px;
+	color: black;
+	text-align: center;
+}
+
+/*select by column */
+
+#columns{
+	height: 55px;
+	width: 1068px;
+}
+
+#col1Selector, #col2Selector, #col3Selector, #col4Selector, #col5Selector, #col6Selector, #col7Selector, #col8Selector, #col9Selector,
+#col10Selector, #col11Selector, #col12Selector, #col13Selector, #col14Selector, #col15Selector, #col16Selector, #col17Selector, #col18Selector
+{
+	height:55px;
+	width:50px;
+	background-color: rgba(255, 255, 255, .2);
+	float:left;
+	margin:3px;
+	color: black;
+	text-align: center;
+}
+
+.col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12, .col13, .col14, .col15, .col16, .col17, .col18{	
+}
+
+
+/*type divs */
+
+
+.alkalai, .li, .na, .k, .rb, .cs, .fr{
+	height:55px;
+	width:50px;
+	background-color: #FF6363;
+	float:left;
+	margin:3px;
+	border-radius: 5px;
+	box-shadow: 2px 2px  #6B6B6B;
+}
+
+.alkaliEarth, .be, .mg, .ca, .sr, .ba, .ra{
+	height:55px;
+	width:50px;
+	background-color: #FFE84F;
+	float:left;
+	margin:3px;
+	border-radius: 5px;
+	box-shadow: 2px 2px  #6B6B6B;
+}
+
+.transition, .sc, .ti, .v, .cr, .mn, .fe, .co, .ni, .cu, .zn, .y, .zr, .nb, .mo, .tc, .ru, .rh, .pd, .ag, .cd, .hf, .ta, .w, .re, .os, .ir, .pt, .au, .hg, .rf, .db, .sg, .bh, .hs, .mt, .ds, .rg, .cn{
+	height:55px;
+	width:50px;
+	background-color: #4D8EFF;
+	float:left;
+	margin:3px;
+	border-radius: 5px;
+	box-shadow: 2px 2px #6B6B6B;
+}
+
+.metalloids, .b, .si, .ge, .as, .sb, .te{
+	height:55px;
+	width:50px;
+	background-color: #FF4FF3;
+	float:left;
+	margin:3px;
+	border-radius: 5px;
+	box-shadow: 2px 2px  #6B6B6B;
+}
+
+.postTransition, .al, .ga, .in, .sn, .tl, .pb, .bi, .po, .uut, .fl, .uup, .lv{
+	height:55px;
+	width:50px;
+	background-color: #A8F227;
+	float:left;
+	margin:3px;
+	border-radius: 5px;
+	box-shadow: 2px 2px #6B6B6B;
+}
+
+.nonMetals, .h, .c, .n, .o, .p, .s, .se{
+	height:55px;
+	width:50px;
+	background-color: #FFA845;
+	float:left;
+	margin:3px;
+	border-radius: 5px;
+	box-shadow: 2px 2px  #6B6B6B;
+}
+
+.halogens, .f, .cl, .br, .i, .at, .uus{
+	height:55px;
+	width:50px;
+	background-color: #00BA8C;
+	float:left;
+	margin:3px;
+	border-radius: 5px;
+	box-shadow: 2px 2px  #6B6B6B;
+}
+
+.noble, .he, .ne, .ar, .kr, .xe, .rn, .uuo{
+	height:55px;
+	width:50px;
+	background-color: #B366FF;
+	float:left;
+	margin:3px;
+	border-radius: 5px;
+	box-shadow: 2px 2px  #6B6B6B;
+}
+
+.lanthanides, .la, .ce, .pr, .nd, .pm, .sm, .eu, .gd, .tb, .dy, .ho, .er, .tm, .yb, .lu{
+	height:55px;
+	width:50px;
+	background-color: #33CC33;
+	float:left;
+	margin:3px;
+	border-radius: 5px;
+	box-shadow: 2px 2px  #6B6B6B;
+}
+
+.actinoids, .ac, .th, .pa, .u, .np, .pu, .am, .cm, .bk, .cf, .es, .fm, .md, .no, .lr{
+	height:55px;
+	width:50px;
+	background-color: #8CE6FF;
+	float:left;
+	margin:3px;
+	border-radius: 5px;
+	box-shadow: 2px 2px  #6B6B6B;
+}
+
+#row_1{
+	height:61px;
+	width:auto;
+}
+
+#row_2{
+	height:61px;
+	width:auto;
+}
+
+#row_3{
+	height:61px;
+	width:auto;
+}
+
+#row_4{
+	height:61px;
+	width:auto;
+}
+
+#row_5{
+	height:61px;
+	width:auto;
+}
+
+#row_6{
+	height:61px;
+	width:auto;
+}
+
+#row_7{
+	height:61px;
+	width:auto;
+}
+
+
+
+
+#alkalaiKey{
+	height:25px;
+	width:auto;
+	background-color: #FF6363;
+	margin:3px;
+	border-radius: 5px;
+	box-shadow: 2px 2px  #6B6B6B;
+	text-align: center;
+	text-shadow: 1px 1px #6B6B6B;
+	font-size: 14px;
+	float: left;
+	padding: 5px;
+
+}
+
+#alkaliEarthKey{
+	height:25px;
+	width:auto;
+	background-color: #FFE84F;
+	margin:3px;
+	border-radius: 5px;
+	box-shadow: 2px 2px  #6B6B6B;
+	text-align: center;
+	text-shadow: 1px 1px #6B6B6B;
+	font-size: 14px;
+	float: left;
+	padding: 5px;
+}
+
+#transitionKey{
+	height:25px;
+	width:auto;
+	background-color: #4D8EFF;
+	margin:3px;
+	border-radius: 5px;
+	box-shadow: 2px 2px #6B6B6B;
+	text-align: center;
+	text-shadow: 1px 1px #6B6B6B;
+	font-size: 14px;
+	float: left;
+	padding: 5px;
+}
+
+#metalloidsKey{
+	height:25px;
+	width:auto;
+	background-color: #FF4FF3;
+	margin:3px;
+	border-radius: 5px;
+	box-shadow: 2px 2px  #6B6B6B;
+	text-align: center;
+	text-shadow: 1px 1px #6B6B6B;
+	font-size: 14px;
+	float: left;
+	padding: 5px;
+}
+
+#postTransitionKey{
+	height:25px;
+	width:auto;
+	background-color: #A8F227;
+	margin:3px;
+	border-radius: 5px;
+	box-shadow: 2px 2px #6B6B6B;
+	text-align: center;
+	text-shadow: 1px 1px #6B6B6B;
+	font-size: 14px;
+	float: left;
+	padding: 5px;
+}
+
+#nonMetalsKey{
+	height:25px;
+	width:auto;
+	background-color: #FFA845;
+	margin:3px;
+	border-radius: 5px;
+	box-shadow: 2px 2px  #6B6B6B;
+	text-align: center;
+	text-shadow: 1px 1px #6B6B6B;
+	font-size: 14px;
+	float: left;
+	padding: 5px;
+}
+
+#halogensKey{
+	height:25px;
+	width:auto;
+	background-color: #00BA8C;
+	margin:3px;
+	border-radius: 5px;
+	box-shadow: 2px 2px  #6B6B6B;
+	text-align: center;
+	text-shadow: 1px 1px #6B6B6B;
+	font-size: 14px;
+	float: left;
+	padding: 5px;
+}
+
+#nobleKey{
+	height:25px;
+	width:auto;
+	background-color: #B366FF;
+	margin:3px;
+	border-radius: 5px;
+	box-shadow: 2px 2px  #6B6B6B;
+	text-align: center;
+	text-shadow: 1px 1px #6B6B6B;
+	font-size: 14px;
+	float: left;
+	padding: 5px;
+}
+
+#lanthanidesKey{
+	height:25px;
+	width:auto;
+	background-color: #33CC33;
+	margin:3px;
+	border-radius: 5px;
+	box-shadow: 2px 2px  #6B6B6B;
+	text-align: center;
+	text-shadow: 1px 1px #6B6B6B;
+	font-size: 14px;
+	float: left;
+	padding: 5px;
+}
+
+#actinoidsKey{
+	height:25px;
+	width:auto;
+	background-color: #8CE6FF;
+	margin:3px;
+	border-radius: 5px;
+	box-shadow: 2px 2px  #6B6B6B;
+	text-align: center;
+	text-shadow: 1px 1px #6B6B6B;
+	font-size: 14px;
+	float: left;
+	padding: 5px;
+}
+
+
+/*jQuery elements */
+
+.effects{
+
+}
+
+#dialog1{
+
+	background-color: #FFA845;
+	font-size: 14px;
+	font-weight: bold;
+}
+#dialog2{
+
+	background-color: #FF6363;
+	font-size: 14px;
+	font-weight: bold;
+}
+#dialog3{
+
+	background-color: #FFE84F;
+	font-size: 14px;
+	font-weight: bold;
+}
+#dialog4{
+
+	background-color: #4D8EFF;
+	font-size: 14px;
+	font-weight: bold;
+}
+#dialog5{
+
+	background-color: #FF4FF3;
+	font-size: 14px;
+	font-weight: bold;
+}
+#dialog6{
+
+	background-color: #A8F227;
+	font-size: 14px;
+	font-weight: bold;
+}
+#dialog7{
+
+	background-color: #00BA8C;
+	font-size: 14px;
+	font-weight: bold;
+}
+#dialog8{
+
+	background-color: #B366FF;
+	font-size: 14px;
+	font-weight: bold;
+}
+#dialog9{
+
+	background-color: #33CC33;
+	font-size: 14px;
+	font-weight: bold;
+}
+#dialog10{
+
+	background-color: #8CE6FF;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+
+#dialog1 h1, #dialog2 h1, #dialog3 h1, #dialog4 h1, #dialog5 h1, #dialog5 h1, #dialog6 h1, #dialog7 h1, #dialog8 h1, #dialog9 h1, #dialog10 h1{
+	color: white;
+	font-size: 36px;
+	text-shadow: 2px 2px #6B6B6B;
+}
+
+#dialog1 h2, #dialog2 h2, #dialog3 h2, #dialog4 h2, #dialog5 h2, #dialog6 h2, #dialog7 h2, #dialog8 h2, #dialog9 h2, #dialog10 h2{
+	font-size: 18px;
+}
+
+.lightblue, .red, .yellow, .blue, .fuschia, .green, .orange, .teal, .purple, .lavander, .pink{
+
+}
