@@ -46,7 +46,7 @@ h3
 }
 
 
-.table{
+.table {
 	height: auto;
 	width: 1068px;
 	margin-left: auto;
@@ -54,16 +54,23 @@ h3
 	clear: both;
 	overflow: hidden;
 	font-weight: bold;
-}
-
-.table a{
-	color: white;
 	font-size: 12px;
 }
 
 .table b{
 	font-size: 18px;
 	text-shadow: 2px 2px #6B6B6B;
+}
+
+.elemNum {
+	margin-left: 5px;
+}
+
+.elemSym {
+	font-size: 18px;
+	text-shadow: 2px 2px #6B6B6B;
+	position: relative;
+	margin-left: 17px;
 }
 
 #table_lower{
@@ -123,6 +130,7 @@ h3
 	margin:3px;
 	color: black;
 	text-align: center;
+	cursor: pointer;
 }
 
 /*select by column */
@@ -150,105 +158,56 @@ h3
 
 /*type divs */
 
-
-.alkalai, .li, .na, .k, .rb, .cs, .fr{
-	height:55px;
-	width:50px;
-	background-color: #FF6363;
-	float:left;
-	margin:3px;
-	border-radius: 5px;
-	box-shadow: 2px 2px  #6B6B6B;
-}
-
-.alkaliEarth, .be, .mg, .ca, .sr, .ba, .ra{
-	height:55px;
-	width:50px;
-	background-color: #FFE84F;
-	float:left;
-	margin:3px;
-	border-radius: 5px;
-	box-shadow: 2px 2px  #6B6B6B;
-}
-
-.transition, .sc, .ti, .v, .cr, .mn, .fe, .co, .ni, .cu, .zn, .y, .zr, .nb, .mo, .tc, .ru, .rh, .pd, .ag, .cd, .hf, .ta, .w, .re, .os, .ir, .pt, .au, .hg, .rf, .db, .sg, .bh, .hs, .mt, .ds, .rg, .cn{
-	height:55px;
-	width:50px;
-	background-color: #4D8EFF;
-	float:left;
-	margin:3px;
+.elementSq {
+	height: 55px;
+	width: 50px;
+	float: left;
+	margin: 3px;
 	border-radius: 5px;
 	box-shadow: 2px 2px #6B6B6B;
+	cursor: pointer;
+	color: white;
 }
 
-.metalloids, .b, .si, .ge, .as, .sb, .te{
-	height:55px;
-	width:50px;
-	background-color: #FF4FF3;
-	float:left;
-	margin:3px;
-	border-radius: 5px;
-	box-shadow: 2px 2px  #6B6B6B;
+
+.alkali {
+	background-color: #C34220;
 }
 
-.postTransition, .al, .ga, .in, .sn, .tl, .pb, .bi, .po, .uut, .fl, .uup, .lv{
-	height:55px;
-	width:50px;
-	background-color: #A8F227;
-	float:left;
-	margin:3px;
-	border-radius: 5px;
-	box-shadow: 2px 2px #6B6B6B;
+.alkaliEarth {
+	background-color: #F5D76D;
 }
 
-.nonMetals, .h, .c, .n, .o, .p, .s, .se{
-	height:55px;
-	width:50px;
-	background-color: #FFA845;
-	float:left;
-	margin:3px;
-	border-radius: 5px;
-	box-shadow: 2px 2px  #6B6B6B;
+.transition {
+	background-color: #3884C0;
 }
 
-.halogens, .f, .cl, .br, .i, .at, .uus{
-	height:55px;
-	width:50px;
-	background-color: #00BA8C;
-	float:left;
-	margin:3px;
-	border-radius: 5px;
-	box-shadow: 2px 2px  #6B6B6B;
+.metalloids {
+	background-color: #C84B89;
 }
 
-.noble, .he, .ne, .ar, .kr, .xe, .rn, .uuo{
-	height:55px;
-	width:50px;
-	background-color: #B366FF;
-	float:left;
-	margin:3px;
-	border-radius: 5px;
-	box-shadow: 2px 2px  #6B6B6B;
+.postTransition {
+	background-color: #A0C13F;
 }
 
-.lanthanides, .la, .ce, .pr, .nd, .pm, .sm, .eu, .gd, .tb, .dy, .ho, .er, .tm, .yb, .lu{
-	height:55px;
-	width:50px;
-	background-color: #33CC33;
-	float:left;
-	margin:3px;
-	border-radius: 5px;
-	box-shadow: 2px 2px  #6B6B6B;
+.nonMetals {
+	background-color: #DC962A;
 }
 
-.actinoids, .ac, .th, .pa, .u, .np, .pu, .am, .cm, .bk, .cf, .es, .fm, .md, .no, .lr{
-	height:55px;
-	width:50px;
-	background-color: #8CE6FF;
-	float:left;
-	margin:3px;
-	border-radius: 5px;
-	box-shadow: 2px 2px  #6B6B6B;
+.halogens {
+	background-color: #3A8C44;
+}
+
+.noble {
+	background-color: #C1285A;
+}
+
+.lanthanides {
+	background-color: #6EA845;
+}
+
+.actinides {
+	background-color: #7BBEDD;
 }
 
 .row {
@@ -256,71 +215,21 @@ h3
 	width: auto;
 }
 
-#row_1{
-	height:61px;
-	width:auto;
-}
-
-#row_2{
-	height:61px;
-	width:auto;
-}
-
-#row_3{
-	height:61px;
-	width:auto;
-}
-
-#row_4{
-	height:61px;
-	width:auto;
-}
-
-#row_5{
-	height:61px;
-	width:auto;
-}
-
-#row_6{
-	height:61px;
-	width:auto;
-}
-
-#row_7{
-	height:61px;
-	width:auto;
-}
-
 .row_lower {
 	margin-left: 168px;
+	height:61px;
+	width:auto;
 }
 
 #group_key {
-	margin: 25px 0px 25px 275px;
+	margin: 25px 0px 25px 55px;
+	cursor: pointer;
+	color: white;
 }
 
-
-
-
-#alkalaiKey{
+.key {
 	height:25px;
 	width:auto;
-	background-color: #FF6363;
-	margin:3px;
-	border-radius: 5px;
-	box-shadow: 2px 2px  #6B6B6B;
-	text-align: center;
-	text-shadow: 1px 1px #6B6B6B;
-	font-size: 14px;
-	float: left;
-	padding: 5px;
-
-}
-
-#alkaliEarthKey{
-	height:25px;
-	width:auto;
-	background-color: #FFE84F;
 	margin:3px;
 	border-radius: 5px;
 	box-shadow: 2px 2px  #6B6B6B;
@@ -330,119 +239,6 @@ h3
 	float: left;
 	padding: 5px;
 }
-
-#transitionKey{
-	height:25px;
-	width:auto;
-	background-color: #4D8EFF;
-	margin:3px;
-	border-radius: 5px;
-	box-shadow: 2px 2px #6B6B6B;
-	text-align: center;
-	text-shadow: 1px 1px #6B6B6B;
-	font-size: 14px;
-	float: left;
-	padding: 5px;
-}
-
-#metalloidsKey{
-	height:25px;
-	width:auto;
-	background-color: #FF4FF3;
-	margin:3px;
-	border-radius: 5px;
-	box-shadow: 2px 2px  #6B6B6B;
-	text-align: center;
-	text-shadow: 1px 1px #6B6B6B;
-	font-size: 14px;
-	float: left;
-	padding: 5px;
-}
-
-#postTransitionKey{
-	height:25px;
-	width:auto;
-	background-color: #A8F227;
-	margin:3px;
-	border-radius: 5px;
-	box-shadow: 2px 2px #6B6B6B;
-	text-align: center;
-	text-shadow: 1px 1px #6B6B6B;
-	font-size: 14px;
-	float: left;
-	padding: 5px;
-}
-
-#nonMetalsKey{
-	height:25px;
-	width:auto;
-	background-color: #FFA845;
-	margin:3px;
-	border-radius: 5px;
-	box-shadow: 2px 2px  #6B6B6B;
-	text-align: center;
-	text-shadow: 1px 1px #6B6B6B;
-	font-size: 14px;
-	float: left;
-	padding: 5px;
-}
-
-#halogensKey{
-	height:25px;
-	width:auto;
-	background-color: #00BA8C;
-	margin:3px;
-	border-radius: 5px;
-	box-shadow: 2px 2px  #6B6B6B;
-	text-align: center;
-	text-shadow: 1px 1px #6B6B6B;
-	font-size: 14px;
-	float: left;
-	padding: 5px;
-}
-
-#nobleKey{
-	height:25px;
-	width:auto;
-	background-color: #B366FF;
-	margin:3px;
-	border-radius: 5px;
-	box-shadow: 2px 2px  #6B6B6B;
-	text-align: center;
-	text-shadow: 1px 1px #6B6B6B;
-	font-size: 14px;
-	float: left;
-	padding: 5px;
-}
-
-#lanthanidesKey{
-	height:25px;
-	width:auto;
-	background-color: #33CC33;
-	margin:3px;
-	border-radius: 5px;
-	box-shadow: 2px 2px  #6B6B6B;
-	text-align: center;
-	text-shadow: 1px 1px #6B6B6B;
-	font-size: 14px;
-	float: left;
-	padding: 5px;
-}
-
-#actinoidsKey{
-	height:25px;
-	width:auto;
-	background-color: #8CE6FF;
-	margin:3px;
-	border-radius: 5px;
-	box-shadow: 2px 2px  #6B6B6B;
-	text-align: center;
-	text-shadow: 1px 1px #6B6B6B;
-	font-size: 14px;
-	float: left;
-	padding: 5px;
-}
-
 
 /*jQuery elements */
 
@@ -450,11 +246,13 @@ h3
 
 }
 
-#dialog1{
-
-	background-color: #FFA845;
+.dialog {
 	font-size: 14px;
 	font-weight: bold;
+}
+
+#dialog1{
+	background-color: #FFA845;
 }
 #dialog2{
 

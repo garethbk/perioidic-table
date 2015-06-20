@@ -1,7 +1,7 @@
 
 
 //create element class
-function element(symbol, name, atomicNumber, atomicWeight, melt, boil, description) {
+function element(symbol, name, atomicNumber, atomicWeight, melt, boil, description, series) {
     this.symbol = symbol;
     this.name = name;
     this.atomicNumber = atomicNumber;
@@ -9,30 +9,34 @@ function element(symbol, name, atomicNumber, atomicWeight, melt, boil, descripti
     this.description = description;
     this.melt = melt;
     this.boil = boil;
+    this.series = series;
 }
 
+//associate series with colors
+    var seriesColors = {'nonMetals': '#DC962A', 'alkali': '#C34220', 'alkaliEarth' : '#F5D76D', 'transition' : '#3884C0', 'metalloids' : '#C84B89', 'postTransition' : '#A0C13F', 'halogens' : '#3A8C44', 'noble' : '#C1285A', 'lanthanides' : '#6EA845', 'actinides' : '#7BBEDD'};
+
 //create non metal group
-    var hydrogen = new element("H", "Hydrogen", 1, 1.00794, 13.99, 20.271, "The lightest and most abundant element.");
-    var carbon = new element("C", "Carbon", 6, 12.011, "unknown", "unknown","The 15th most abundant element in the Earth's crust." );
-    var nitrogen = new element("N", "Nitrogen", 7, 14.007, 63.15, 77.355, "A common element in the Universe, estimated to be seventh in total abundance.");
-    var oxygen = new element("O", "Oxygen", 8, 15.999, 54.36, 90.188, "An important part of the atomsphere.");
-    var phosphorus = new element("P", "Phosphorus", 15, 30.97376, 44.2, 280.5, "An element essential for life.");
-    var sulfur = new element("S", "Sulfur", 16, 32.066, 388.36, 717.8, "Something something.");
-    var selenium = new element("Se", "Selenium", 34, 78.971, 494, 958, "Something something.");
-//create alkalai group
-    var lithium = new element("Li", "Lithium", 3, 6.94, 453.65, 1615, "Something something.");
-    var sodium = new element("Na", "Sodium", 11, 22.9897, 370.944, 1156.090, "Something something.");
-    var potassium = new element("K", "Potassium", 19, 39.0983, 336.7, 1032, "Something something.");
-    var rubidium = new element("Rb", "Rubidium", 37, 85.4678, 312.45, 961, "Something something.");
-    var cesium = new element("Cs", "Cesium", 55, 132.90545, 301.7, 944, "Something something.");
-    var francium = new element("Fr", "Francium", 87, 223, 300, 950, "Something something.");
+    var H = new element("H", "Hydrogen", 1, 1.00794, 13.99, 20.271, "The lightest and most abundant element.", "nonMetals");
+    var C = new element("C", "Carbon", 6, 12.011, "unknown", "unknown","The 15th most abundant element in the Earth's crust.", "nonMetals");
+    var N = new element("N", "Nitrogen", 7, 14.007, 63.15, 77.355, "A common element in the Universe, estimated to be seventh in total abundance.", "nonMetals");
+    var O = new element("O", "Oxygen", 8, 15.999, 54.36, 90.188, "An important part of the atomsphere.", "nonMetals");
+    var P = new element("P", "Phosphorus", 15, 30.97376, 44.2, 280.5, "An element essential for life.", "nonMetals");
+    var S = new element("S", "Sulfur", 16, 32.066, 388.36, 717.8, "Something something.", "nonMetals");
+    var Se = new element("Se", "Selenium", 34, 78.971, 494, 958, "Something something.", "nonMetals");
+//create alkali group
+    var Li = new element("Li", "Lithium", 3, 6.94, 453.65, 1615, "Something something.", "alkali");
+    var sodium = new element("Na", "Sodium", 11, 22.9897, 370.944, 1156.090, "Something something.", "alkali");
+    var potassium = new element("K", "Potassium", 19, 39.0983, 336.7, 1032, "Something something.", "alkali");
+    var rubidium = new element("Rb", "Rubidium", 37, 85.4678, 312.45, 961, "Something something.", "alkali");
+    var cesium = new element("Cs", "Cesium", 55, 132.90545, 301.7, 944, "Something something.", "alkali");
+    var francium = new element("Fr", "Francium", 87, 223, 300, 950, "Something something.", "alkali");
 //create alkali earth group
-    var beryllium = new element("Be", "Beryllium", 4, 9.01218, 1560, 2741, "Something something.");
-    var magnesium = new element("Mg", "Magnesium", 12, 24.305, 923, 1363, "Something something.");
-    var calcium = new element("Ca", "Calcium", 20, 40.078, 1115, 1757, "Something something.");
-    var strontium = new element("Sr", "Strontium", 38, 87.62, 1050, 1650, "Something something.");
-    var barium = new element("Ba", "Barium", 56, 137.327, 1000, 2118, "Something something.");
-    var radium = new element("Ra", "Radium", 88, 226, 973, 2010, "Something something.");
+    var beryllium = new element("Be", "Beryllium", 4, 9.01218, 1560, 2741, "Something something.", "alkaliEarth");
+    var magnesium = new element("Mg", "Magnesium", 12, 24.305, 923, 1363, "Something something.", "alkaliEarth");
+    var calcium = new element("Ca", "Calcium", 20, 40.078, 1115, 1757, "Something something.", "alkaliEarth");
+    var strontium = new element("Sr", "Strontium", 38, 87.62, 1050, 1650, "Something something.", "alkaliEarth");
+    var barium = new element("Ba", "Barium", 56, 137.327, 1000, 2118, "Something something.", "alkaliEarth");
+    var radium = new element("Ra", "Radium", 88, 226, 973, 2010, "Something something.", "alkaliEarth");
 //create transition group
     var scandium = new element("Sc", "Scandium", 21, 44.95590, 1814, 3109, "something something");
     var titanium = new element("Ti", "Titanium", 22, 47.867, 1941, 3560, "something something");
@@ -73,7 +77,7 @@ function element(symbol, name, atomicNumber, atomicWeight, melt, boil, descripti
     var roentgenium = new element('Rg', 'Roentgenium', 111, 281, 'unknown', 'unknown', "something something");
     var copernicium = new element('Cn', 'Copernicium', 112, 285, 'unknown', 'unknown', "something something"); 
 //create metlloids group
-    var boron = new element('B', 'Boron', 5, 10.81, 2349, 4200, "something something");
+    var B = new element('B', 'Boron', 5, 10.81, 2349, 4200, "something something", "metalloids");
     var silicon = new element('Si', 'Silicon', 14, 28.085, 1687, 3538, "something something");
     var germanium = new element('Ge', 'Germanium', 32, 72.630, 1211.40, 3106, "something something");
     var arsenic = new element('As', 'Arsenic', 33, 74.921595, 'unknown', 'unknown', "something something");
@@ -100,7 +104,7 @@ function element(symbol, name, atomicNumber, atomicWeight, melt, boil, descripti
     var astatine = new element('At', 'Astatine', 85, 210, 575, 610, "something something");
     var ununseptium = new element('Uus', 'Ununseptium', 117, 294, 'unknown', 'unknown', "something something");
 //create noble gas group
-    var helium = new element('He', 'Helium', 2, 4.002602, 0.95, 4.222, "something something");
+    var He = new element('He', 'Helium', 2, 4.002602, 0.95, 4.222, "something something", "noble");
     var neon = new element('Ne', 'Neon', 10, 20.1797, 24.56, 27.104, "something something");
     var argon = new element('Ar', 'Argon', 18, 39.948, 83.81, 87.302, "something something");
     var krypton = new element('Kr', 'Krypton', 36, 83.798, 115.78, 119.93, "something something");
@@ -173,50 +177,13 @@ $(document).ready(function (){
     });
 
     //select by group color
-    $('#hydrogenKey').click(function () {
-        $('.lightblue').effect('highlight', {color: '#F0F0F0'}, 1500);
+    $('#group_key div').click(function(e){
+        e.preventDefault();
+        $series = $(this).attr("class");
+        $series = $series.replace(' key', '');
+        $elems = $('.' + $series);
+        $elems.effect('highlight', {color: '#F0F0F0'}, 1500);
     });
-
-    $('#alkalaiKey').click(function () {
-        $('.red').effect('highlight', {color: '#F0F0F0'}, 1500);
-    });
-
-    $('#alkaliEarthKey').click(function () {
-        $('.yellow').effect('highlight', {color: '#F0F0F0'}, 1500);
-    });
-
-    $('#transitionKey').click(function () {
-        $('.blue').effect('highlight', {color: '#F0F0F0'}, 1500);
-    });
-
-    $('#postTransitionKey').click(function () {
-        $('.green').effect('highlight', {color: '#F0F0F0'}, 1500);
-    });
-
-    $('#metalloidsKey').click(function () {
-        $('.fuschia').effect('highlight', {color: '#F0F0F0'}, 1500);
-    });
-
-    $('#nonMetalsKey').click(function () {
-        $('.orange').effect('highlight', {color: '#F0F0F0'}, 1500);
-    });
-
-    $('#halogensKey').click(function () {
-        $('.teal').effect('highlight', {color: '#F0F0F0'}, 1500);
-    });
-
-    $('#nobleKey').click(function () {
-        $('.purple').effect('highlight', {color: '#F0F0F0'}, 1500);
-    });
-
-    $('#lanthanidesKey').click(function () {
-        $('.lavander').effect('highlight', {color: '#F0F0F0'}, 1500);
-    });
-
-    $('#actinoidsKey').click(function () {
-        $('.pink').effect('highlight', {color: '#F0F0F0'}, 1500);
-    });
-
 
     //create default dialog box
     $.extend($.ui.dialog.prototype.options, { modal: true, resizable: true, autoOpen: false, show: 'clip', height: 350, width: 350 });
@@ -232,530 +199,22 @@ $(document).ready(function (){
             });
         }
 
+    $('.elementSq').click(function(){
+        $elementSym = $(this).find('.elemSym').html();
+        $elementSym = eval($elementSym);
+        $elemSeries = $elementSym["series"];
+        $bgColor = seriesColors[$elemSeries];
+        dialogName = '.dialog';
+        $(dialogName).css("background-color", $bgColor);
+        fillDialog($elementSym);
+        console.log($elementSym);
+    });
+
 	$(function() {
         //create dialog 1 (non metal group)
-	    $('#dialog1').dialog({
+	    $('.dialog').dialog({
         });
-
-        //add non metal properties
-        $( ".h" ).click(function(){
-            dialogName = '#dialog1';
-            fillDialog(hydrogen);
-        });
-        $( ".c" ).click(function(){
-            dialogName = '#dialog1';
-            fillDialog(carbon);
-        });
-        $( ".n" ).click(function(){
-            dialogName = '#dialog1';
-            fillDialog(nitrogen);
-        });
-        $( ".o" ).click(function(){
-            dialogName = '#dialog1';
-            fillDialog(oxygen);
-        });
-        $( ".p" ).click(function(){
-            dialogName = '#dialog1';
-            fillDialog(phosphorus);
-        });
-        $( ".s" ).click(function(){
-            dialogName = '#dialog1';
-            fillDialog(sulfur);
-        });
-        $( ".se" ).click(function(){
-            dialogName = '#dialog1';
-            fillDialog(selenium);
-        });  
 	});
 
-    $(function() {
-        $('#dialog2').dialog({        
-        });
-
-        //add alkalai elements
-        $( ".li" ).click(function(){
-            dialogName = '#dialog2';
-            fillDialog(lithium);
-        });  
-        $( ".na" ).click(function(){
-            dialogName = '#dialog2';
-            fillDialog(sodium);
-        });
-        $( ".k" ).click(function(){
-            dialogName = '#dialog2';
-            fillDialog(potassium);
-        });
-        $( ".rb" ).click(function(){
-            dialogName = '#dialog2';
-            fillDialog(rubidium);
-        });
-        $( ".cs" ).click(function(){
-            dialogName = '#dialog2';
-            fillDialog(cesium);
-        });
-        $( ".fr" ).click(function(){
-            dialogName = '#dialog2';
-            fillDialog(francium);
-        });       
-    });
-
-    $(function() {
-        $('#dialog3').dialog({        
-        });
-
-        //add alkalai earth elements
-        $( ".be" ).click(function(){
-            dialogName = '#dialog3';
-            fillDialog(beryllium);
-        });  
-        $( ".mg" ).click(function(){
-            dialogName = '#dialog3';
-            fillDialog(magnesium);
-        });
-        $( ".ca" ).click(function(){
-            dialogName = '#dialog3';
-            fillDialog(calcium);
-        });
-        $( ".sr" ).click(function(){
-            dialogName = '#dialog3';
-            fillDialog(strontium);
-        });
-        $( ".ba" ).click(function(){
-            dialogName = '#dialog3';
-            fillDialog(barium);
-        });
-        $( ".ra" ).click(function(){
-            dialogName = '#dialog3';
-            fillDialog(radium);
-        });        
-    });
-
-    $(function() {
-        $('#dialog4').dialog({        
-        });
-
-        //add transiton elements
-        $( ".sc" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(scandium);
-        });  
-        $( ".ti" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(titanium);
-        });
-        $( ".v" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(vanadium);
-        });  
-        $( ".cr" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(chromium);
-        });  
-        $( ".mn" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(manganese);
-        }); 
-        $( ".fe" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(iron);
-        });
-        $( ".co" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(cobalt);
-        }); 
-        $( ".ni" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(nickel);
-        });   
-        $( ".cu" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(copper);
-        });   
-        $( ".zn" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(zinc);
-        });
-        $( ".y" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(yttrium);
-        }); 
-        $( ".zr" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(zirconium);
-        });  
-        $( ".nb" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(niobium);
-        });  
-        $( ".mo" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(molybdenum);
-        });  
-        $( ".tc" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(technetium);
-        });  
-        $( ".ru" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(ruthenium);
-        });  
-        $( ".rh" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(rhodium);
-        });  
-        $( ".pd" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(palladium);
-        });  
-        $( ".ag" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(silver);
-        });  
-        $( ".cd" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(cadmium);
-        }); 
-        $( ".hf" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(hafnium);
-        });
-        $( ".ta" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(tantalum);
-        }); 
-        $( ".w" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(tungsten);
-        }); 
-        $( ".re" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(rhenium);
-        }); 
-        $( ".os" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(osmium);
-        }); 
-        $( ".ir" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(iridium);
-        }); 
-        $( ".pt" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(pl);
-        });
-        $( ".au" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(gold);
-        });  
-        $( ".hg" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(mercury);
-        }); 
-        $( ".rf" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(rutherfordium);
-        }); 
-        $( ".db" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(dubnium);
-        }); 
-        $( ".sg" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(seaborgium);
-        }); 
-        $( ".bh" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(bohrium);
-        }); 
-        $( ".hs" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(hassium);
-        });
-        $( ".mt" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(meitnerium);
-        });
-        $( ".ds" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(darmstadium);
-        }); 
-        $( ".rg" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(roentgenium);
-        });   
-        $( ".cn" ).click(function(){
-            dialogName = '#dialog4';
-            fillDialog(copernicium);
-        });      
-    });
-
-    $(function() {
-        $('#dialog5').dialog({        
-        });
-        $( ".b" ).click(function(){
-            dialogName = '#dialog5';
-            fillDialog(boron);
-        }); 
-        $( ".si" ).click(function(){
-            dialogName = '#dialog5';
-            fillDialog(silicon);
-        });
-        $( ".ge" ).click(function(){
-            dialogName = '#dialog5';
-            fillDialog(germanium);
-        });
-        $( ".as" ).click(function(){
-            dialogName = '#dialog5';
-            fillDialog(arsenic);
-        }); 
-        $( ".sb" ).click(function(){
-            dialogName = '#dialog5';
-            fillDialog(antimony);
-        });  
-        $( ".te" ).click(function(){
-            dialogName = '#dialog5';
-            fillDialog(tellurium);
-        });  
-    }); 
-    $(function() {
-        $('#dialog6').dialog({        
-        });
-        $( ".al" ).click(function(){
-            dialogName = '#dialog6';
-            fillDialog(aluminium);
-        }); 
-        $( ".ga" ).click(function(){
-            dialogName = '#dialog6';
-            fillDialog(gallium);
-        }); 
-        $( ".in" ).click(function(){
-            dialogName = '#dialog6';
-            fillDialog(indium);
-        }); 
-        $( ".sn" ).click(function(){
-            dialogName = '#dialog6';
-            fillDialog(tin);
-        }); 
-        $( ".tl" ).click(function(){
-            dialogName = '#dialog6';
-            fillDialog(thallium);
-        }); 
-        $( ".pb" ).click(function(){
-            dialogName = '#dialog6';
-            fillDialog(lead);
-        }); 
-        $( ".bi" ).click(function(){
-            dialogName = '#dialog6';
-            fillDialog(bismuth);
-        }); 
-        $( ".po" ).click(function(){
-            dialogName = '#dialog6';
-            fillDialog(polonium);
-        });
-        $( ".uut" ).click(function(){
-            dialogName = '#dialog6';
-            fillDialog(ununtrium);
-        });  
-        $( ".fl" ).click(function(){
-            dialogName = '#dialog6';
-            fillDialog(flerovium);
-        }); 
-        $( ".uup" ).click(function(){
-            dialogName = '#dialog6';
-            fillDialog(ununpentium);
-        }); 
-        $( ".lv" ).click(function(){
-            dialogName = '#dialog6';
-            fillDialog(livermorium);
-        }); 
-    });
-    $(function() {
-        $('#dialog7').dialog({        
-        });
-        $( ".f" ).click(function(){
-            dialogName = '#dialog7';
-            fillDialog(fluorine);
-        }); 
-        $( ".cl" ).click(function(){
-            dialogName = '#dialog7';
-            fillDialog(cholrine);
-        }); 
-        $( ".br" ).click(function(){
-            dialogName = '#dialog7';
-            fillDialog(bromine);
-        }); 
-        $( ".i" ).click(function(){
-            dialogName = '#dialog7';
-            fillDialog(iodine);
-        });
-        $( ".at" ).click(function(){
-            dialogName = '#dialog7';
-            fillDialog(astatine);
-        });
-        $( ".uus" ).click(function(){
-            dialogName = '#dialog7';
-            fillDialog(ununseptium);
-        });   
-    }); 
-    $(function() {
-        $('#dialog8').dialog({        
-        });
-        $( ".he" ).click(function(){
-            dialogName = '#dialog8';
-            fillDialog(helium);
-        }); 
-        $( ".ne" ).click(function(){
-            dialogName = '#dialog8';
-            fillDialog(neon);
-        }); 
-        $( ".ar" ).click(function(){
-            dialogName = '#dialog8';
-            fillDialog(argon);
-        });
-        $( ".kr" ).click(function(){
-            dialogName = '#dialog8';
-            fillDialog(krypton);
-        }); 
-        $( ".xe" ).click(function(){
-            dialogName = '#dialog8';
-            fillDialog(xenon);
-        });  
-        $( ".rn" ).click(function(){
-            dialogName = '#dialog8';
-            fillDialog(radon);
-        }); 
-        $( ".uuo" ).click(function(){
-            dialogName = '#dialog8';
-            fillDialog(ununoctium);
-        }); 
-    });
-     $(function() {
-        $('#dialog9').dialog({        
-        });
-        $( ".la" ).click(function(){
-            dialogName = '#dialog9';
-            fillDialog(lanthanum);
-        }); 
-        $( ".ce" ).click(function(){
-            dialogName = '#dialog9';
-            fillDialog(cerium);
-        }); 
-        $( ".pr" ).click(function(){
-            dialogName = '#dialog9';
-            fillDialog(praseodymium);
-        });
-        $( ".nd" ).click(function(){
-            dialogName = '#dialog9';
-            fillDialog(neodymium);
-        });  
-        $( ".pm" ).click(function(){
-            dialogName = '#dialog9';
-            fillDialog(promethium);
-        }); 
-        $( ".sm" ).click(function(){
-            dialogName = '#dialog9';
-            fillDialog(samarium);
-        }); 
-        $( ".eu" ).click(function(){
-            dialogName = '#dialog9';
-            fillDialog(europium);
-        }); 
-        $( ".gd" ).click(function(){
-            dialogName = '#dialog9';
-            fillDialog(gadolinium);
-        }); 
-        $( ".tb" ).click(function(){
-            dialogName = '#dialog9';
-            fillDialog(terbium);
-        }); 
-        $( ".dy" ).click(function(){
-            dialogName = '#dialog9';
-            fillDialog(dysprosium);
-        }); 
-        $( ".ho" ).click(function(){
-            dialogName = '#dialog9';
-            fillDialog(holmium);
-        }); 
-        $( ".er" ).click(function(){
-            dialogName = '#dialog9';
-            fillDialog(erbium);
-        }); 
-        $( ".tm" ).click(function(){
-            dialogName = '#dialog9';
-            fillDialog(thulium);
-        }); 
-        $( ".yb" ).click(function(){
-            dialogName = '#dialog9';
-            fillDialog(ytterbium);
-        }); 
-        $( ".lu" ).click(function(){
-            dialogName = '#dialog9';
-            fillDialog(lutetium);
-        }); 
-    });
-     $(function() {
-        $('#dialog10').dialog({        
-        });
-        $( ".ac" ).click(function(){
-            dialogName = '#dialog10';
-            fillDialog(actinium);
-        }); 
-        $( ".th" ).click(function(){
-            dialogName = '#dialog10';
-            fillDialog(thorium);
-        }); 
-        $( ".pa" ).click(function(){
-            dialogName = '#dialog10';
-            fillDialog(protactinium);
-        }); 
-        $( ".u" ).click(function(){
-            dialogName = '#dialog10';
-            fillDialog(uranium);
-        }); 
-        $( ".np" ).click(function(){
-            dialogName = '#dialog10';
-            fillDialog(neptunium);
-        }); 
-        $( ".pu" ).click(function(){
-            dialogName = '#dialog10';
-            fillDialog(plutonium);
-        }); 
-        $( ".am" ).click(function(){
-            dialogName = '#dialog10';
-            fillDialog(americium);
-        }); 
-        $( ".cm" ).click(function(){
-            dialogName = '#dialog10';
-            fillDialog(curium);
-        }); 
-        $( ".bk" ).click(function(){
-            dialogName = '#dialog10';
-            fillDialog(berkelium);
-        }); 
-        $( ".cf" ).click(function(){
-            dialogName = '#dialog10';
-            fillDialog(californium);
-        }); 
-        $( ".es" ).click(function(){
-            dialogName = '#dialog10';
-            fillDialog(einsteinium);
-        }); 
-        $( ".fm" ).click(function(){
-            dialogName = '#dialog10';
-            fillDialog(fermium);
-        }); 
-        $( ".md" ).click(function(){
-            dialogName = '#dialog10';
-            fillDialog(mendelevium);
-        }); 
-        $( ".no" ).click(function(){
-            dialogName = '#dialog10';
-            fillDialog(nobelium);
-        }); 
-        $( ".lr" ).click(function(){
-            dialogName = '#dialog10';
-            fillDialog(lawrencium);
-        }); 
-    }); 
 });
 
