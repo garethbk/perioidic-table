@@ -2,7 +2,8 @@ body
 {
 	margin: 0px;
 	background-color: #69b8f1;
-	background-image: url('cloud_bg.jpg');
+	background-image: url('smv-bg.jpg');
+	background-size: 100%;
 	font-family: 'Helvetica', sans-serif;
 }
 h3
@@ -151,10 +152,6 @@ h3
 	text-align: center;
 	cursor: pointer;
 }
-
-.col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12, .col13, .col14, .col15, .col16, .col17, .col18{	
-}
-
 
 /*type divs */
 

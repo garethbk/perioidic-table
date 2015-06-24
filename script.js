@@ -209,6 +209,7 @@ $(document).ready(function (){
             });
         }
 
+    //generate modal dialog for element clicked
     $('.elementSq').click(function(){
         $elementSym = $(this).find('.elemSym').html();
         $elementSym = eval($elementSym);
@@ -221,7 +222,7 @@ $(document).ready(function (){
     });
 
 	$(function() {
-        //create dialog 1 (non metal group)
+        //create dialog box
 	    $('.dialog').dialog({
         });
 	});
