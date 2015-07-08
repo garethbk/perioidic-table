@@ -1,8 +1,9 @@
 body
 {
 	margin: 0px;
-	background-color: #69b8f1;
-	background-image: url('smv-bg.jpg');
+	margin-top: 25px;
+	background-color: #000;
+	background-image: url('smv-bg-2.jpg');
 	background-size: 100%;
 	font-family: 'Helvetica', sans-serif;
 }
@@ -44,6 +45,17 @@ h3
 	border: 0px outset black;
 	box-shadow: 2px 2px #6B6B6B;
 	border-radius: 10px;
+	outline: none;
+
+	cursor: pointer;
+
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+}
+
+#info-button:hover {
+	transform: scale(1.25);
+	-webkit-transform: scale(1.25);
 }
 
 
@@ -70,8 +82,9 @@ h3
 .elemSym {
 	font-size: 18px;
 	text-shadow: 2px 2px #6B6B6B;
-	position: relative;
+	position: absolute;
 	margin-left: 12px;
+	margin-top: 5px;
 }
 
 #table_lower{
@@ -123,15 +136,25 @@ h3
 
 /*select by row */
 
-.rowSelector {
+.rowSelector, .colSelector {
 	height:55px;
 	width:50px;
-	background-color: rgba(255, 255, 255, .2);
+	background-color: rgba(255, 255, 255, 0.75);
 	float:left;
 	margin:3px;
+	font-size: 16px;
+	line-height: 55px;
 	color: black;
 	text-align: center;
 	cursor: pointer;
+
+	transition: 0.25s;
+	-webkit-transition: 0.25s;
+}
+
+.rowSelector:hover, .colSelector:hover, .elementSq:hover, .key:hover {
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
 }
 
 /*select by column */
@@ -142,17 +165,6 @@ h3
 	margin-left: 56px;
 }
 
-.colSelector {
-	height: 55px;
-	width: 50px;
-	background-color: rgba(255, 255, 255, 0.2);
-	float: left;
-	margin: 3px;
-	color: black;
-	text-align: center;
-	cursor: pointer;
-}
-
 /*type divs */
 
 .elementSq {
@@ -161,7 +173,7 @@ h3
 	float: left;
 	margin: 3px;
 	border-radius: 5px;
-	box-shadow: 2px 2px #6B6B6B;
+	box-shadow: 2px 2px 2px #6B6B6B;
 	cursor: pointer;
 	color: white;
 }
@@ -172,7 +184,8 @@ h3
 }
 
 .alkaliEarth {
-	background-color: #F5D76D;
+	/*background-color: #F5D76D;*/
+	background-color: #95273C;
 }
 
 .transition {
@@ -219,7 +232,7 @@ h3
 }
 
 #group_key {
-	margin: 25px 0px 25px 55px;
+	margin: 25px 0px 25px 25px;
 	cursor: pointer;
 	color: white;
 }
@@ -227,7 +240,7 @@ h3
 .key {
 	height:25px;
 	width:auto;
-	margin:3px;
+	margin:5px;
 	border-radius: 5px;
 	box-shadow: 2px 2px  #6B6B6B;
 	text-align: center;
@@ -258,6 +271,7 @@ h3
 .dialog p {
 	color: white;
 	display: block;
+	max-width: 300px;
 }
 
 .videoEmbed {
@@ -265,5 +279,36 @@ h3
 	display: block;
 	position: absolute;
 	bottom: 50px;
-	left: 300px;
+	left: 350px;
+}
+
+#dialog-info {
+	background-color: lightgrey;
+}
+
+.credits {
+	font-size: 12px;
+	font-style: italic;
+}
+
+.unselected {
+	opacity: 0.5;
+}
+
+.selected {
+}
+
+/* UI modal edits */
+
+.ui-dialog .ui-dialog-titlebar-close {
+	right: 1em;
+	top: 0;
+	text-decoration: none;
+	margin: 0;
+	width: auto;
+	height: auto;
+}
+
+.ui-dialog .ui-dialog-titlebar-close:hover {
+	border: none;
 }

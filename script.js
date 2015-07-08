@@ -14,10 +14,13 @@ function element(symbol, name, atomicNumber, atomicWeight, melt, boil, descripti
 }
 
 //associate series with colors
-    var seriesColors = {'nonMetals': '#DC962A', 'alkali': '#C34220', 'alkaliEarth' : '#F5D76D', 'transition' : '#3884C0', 'metalloids' : '#C84B89', 'postTransition' : '#A0C13F', 'halogens' : '#3A8C44', 'noble' : '#C1285A', 'lanthanides' : '#6EA845', 'actinides' : '#7BBEDD'};
+    var seriesColors = {'nonMetals': '#DC962A', 'alkali': '#C34220', 'alkaliEarth' : '#95273C', 'transition' : '#3884C0', 'metalloids' : '#C84B89', 'postTransition' : '#A0C13F', 'halogens' : '#3A8C44', 'noble' : '#C1285A', 'lanthanides' : '#6EA845', 'actinides' : '#7BBEDD'};
+
+//about info
+    var about = {'title' : 'The Periodic Table', 'history' : 'The periodic table is a method of arranging the 118 known chemical elements based on atomic numbers, similarity of properties, and electron configurations. The table consists of a grid made up of horizontal rows and vertical columns, respectively referred to as periods and groups. Elements in a period share the same number of electron shells, while elements in a group are physically or chemically similar.<br><br>Russian chemist Dmitri Mendeleev first published the modern periodic table in 1869, building on the ideas of Antoine Lavoisier, Leopold Gmelin, Jean-Baptiste Dumas, and others. Mendeleev\'s table included gaps where undiscovered elements might fit, and his predictions on the properties of these elements were shown correct upon their later discovery. This validated the periodic table as a strong analytical tool for understanding the chemical world around us.<br><br>Explore the periodic table by touching elements, rows, periods, and category names!', 'credits' : 'This periodic table was developed by Gareth Bromser-Kloeden, based on initial concept, design, & work by Elyse Bromser-Kloeden.'};
 
 //create non metal group
-    var H = new element("H", "Hydrogen", 1, 1.00794, 13.99, 20.271, "The lightest and most abundant element.", "nonMetals", "https://www.youtube.com/v/fesgl5Cs5FY");
+    var H = new element("H", "Hydrogen", 1, 1.00794, 13.99, 20.271, "The lightest and most abundant element.", "nonMetals", "/periodic%20table/periodic%20table/videos/hydrogen.mp4");
     var C = new element("C", "Carbon", 6, 12.011, "unknown", "unknown","The 15th most abundant element in the Earth's crust.", "nonMetals");
     var N = new element("N", "Nitrogen", 7, 14.007, 63.15, 77.355, "A common element in the Universe, estimated to be seventh in total abundance.", "nonMetals");
     var O = new element("O", "Oxygen", 8, 15.999, 54.36, 90.188, "An important part of the atomsphere.", "nonMetals");
@@ -25,7 +28,7 @@ function element(symbol, name, atomicNumber, atomicWeight, melt, boil, descripti
     var S = new element("S", "Sulfur", 16, 32.066, 388.36, 717.8, "Something something.", "nonMetals");
     var Se = new element("Se", "Selenium", 34, 78.971, 494, 958, "Something something.", "nonMetals");
 //create alkali group
-    var Li = new element("Li", "Lithium", 3, 6.94, 453.65, 1615, "Something something.", "alkali", "https://www.youtube.com/v/8aShrZETuGE");
+    var Li = new element("Li", "Lithium", 3, 6.94, 453.65, 1615, "Something something.", "alkali", "/periodic%20table/periodic%20table/videos/lithium.mp4");
     var Na = new element("Na", "Sodium", 11, 22.9897, 370.944, 1156.090, "Something something.", "alkali");
     var K = new element("K", "Potassium", 19, 39.0983, 336.7, 1032, "Something something.", "alkali");
     var Rb = new element("Rb", "Rubidium", 37, 85.4678, 312.45, 961, "Something something.", "alkali");
@@ -109,7 +112,7 @@ function element(symbol, name, atomicNumber, atomicWeight, melt, boil, descripti
     var Uus = new element('Uus', 'Ununseptium', 117, 294, 'unknown', 'unknown', "something something", "halogens");
 
 //create noble gas group
-    var He = new element('He', 'Helium', 2, 4.002602, 0.95, 4.222, "something something", "noble");
+    var He = new element('He', 'Helium', 2, 4.002602, 0.95, 4.222, "something something", "noble", "/periodic%20table/periodic%20table/videos/helium.mp4");
     var Ne = new element('Ne', 'Neon', 10, 20.1797, 24.56, 27.104, "something something", "noble");
     var Ar = new element('Ar', 'Argon', 18, 39.948, 83.81, 87.302, "something something", "noble");
     var Kr = new element('Kr', 'Krypton', 36, 83.798, 115.78, 119.93, "something something", "noble");
@@ -162,7 +165,7 @@ $(document).ready(function (){
     //select rows
     $('.rowSelector').click(function(e){
         e.preventDefault();
-        $(this).parents('.row').effect('shake', {distance: 5, times: 3}, 1000);
+        $(this).siblings().effect('shake', {distance: 5, times: 3}, 1000);
     });
 
     //select rows split into upper and lower table elements
@@ -188,8 +191,16 @@ $(document).ready(function (){
         e.preventDefault();
         $series = $(this).attr("class");
         $series = $series.replace(' key', '');
+        $series = $series.replace(' selected', '');
         $elems = $('.' + $series);
         $elems.effect('highlight', {color: '#F0F0F0'}, 1500);
+        if ($elems.hasClass('selected')){
+            $('.elementSq').removeClass('unselected');
+            $elems.removeClass('selected');
+        } else {
+            $('.elementSq').addClass('unselected');
+            $elems.removeClass('unselected').addClass('selected');
+        }
     });
 
     //create default dialog box
@@ -202,15 +213,25 @@ $(document).ready(function (){
             $(document).ready(function (){
                 $(dialogName).empty();
                 $(dialogName).dialog("open");
-                $(dialogName).append( '<h1>'+ element.symbol + '</h1>' + '<h2>' + element.name + '</h2>' + '<p>Atomic Number: ' + element.atomicNumber + '<br>' + 'Atomic Weight: ' + element.atomicWeight + '</p><p>' + 'Melting Point: ' + element.melt +' (K)' + '<br>' + 'Boiling Point: ' + element.boil + ' (K)' + '</p>' + '<iframe width="400" height="315" class="videoEmbed" src="' + element.video + '?autoplay=1"></iframe>');
+                $(dialogName).append( '<h1>'+ element.symbol + '</h1>' + '<h2>' + element.name + '</h2>' + '<p>Atomic Number: ' + element.atomicNumber + '<br>' + 'Atomic Weight: ' + element.atomicWeight + '</p><p>' + 'Melting Point: ' + element.melt +' (K)' + '<br>' + 'Boiling Point: ' + element.boil + ' (K)' + '</p>'  + '<p>' + element.description + '</p>' + '<video controls autoplay width="400" height="315" class="videoEmbed" src="' + element.video + '"></video>');
                 $(dialogName).dialog({close: function( event, ui ){
-                    $('iframe').attr('src', '');
+                    $('video')[0].pause();
                 }});
             });
         }
 
+    //create modal for about info
+    var aboutDialog = function(){
+        $(dialogName).empty();
+        $(dialogName).dialog("open");
+        $(dialogName).append('<h1>' + about.title + '</h1>' + '<p>' + about.history + '</p>' + '<p class="credits">' + about.credits + '</p>');
+    }
+
     //generate modal dialog for element clicked
     $('.elementSq').click(function(){
+        var dialogBar = $("a.ui-dialog-titlebar-close.ui-corner-all");
+        $(dialogBar).empty();
+        $(dialogBar).append('<h3 style="margin:0">Close</h3>');
         $elementSym = $(this).find('.elemSym').html();
         $elementSym = eval($elementSym);
         $elemSeries = $elementSym["series"];
@@ -218,13 +239,22 @@ $(document).ready(function (){
         dialogName = '.dialog';
         $(dialogName).css("background-color", $bgColor);
         fillDialog($elementSym);
-        console.log($elementSym);
+        //wait a sec then play the video
+        setTimeout(function(){
+            $("video").get(0).play();
+        }, 1000);
+    });
+
+    //generate modal dialog for about button
+    $('#info-button').click(function(){
+        dialogName = '#dialog-info';
+        aboutDialog(about);
     });
 
 	$(function() {
-        //create dialog box
-	    $('.dialog').dialog({
-        });
+        //create dialog boxes
+        $('#dialog-info').dialog({height: 475, width: 800});
+	    $('.dialog').dialog({});
 	});
 
 });
